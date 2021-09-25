@@ -1,0 +1,32 @@
+name: Shoe Store Project 3
+on:
+
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v2-beta
+        with:
+          version: 14
+
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Create Build
+        run: npm run build
+        
+      - name: Install Surge
+        run: npm install -g surge
+        
+      - name: Deploy
+        run: surge ./build http://project3-shoe-store-by-abdulhannan.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
