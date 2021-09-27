@@ -13,7 +13,7 @@ function ProductsItem() {
     return(
         <div>
             <p style={{display: "flex", justifyContent: "flex-start", alignItems: "center", }}>
-                    <Button  style={{color: "rgb(100, 100, 100)"}}  onClick={()=> navigate("/")}>Home</Button>  &gt;  <Button  style={{color: "rgb(100, 100, 100)"}} onClick={()=> navigate("/products")} >Products</Button>  &gt;  <Button  style={{color: "rgb(100, 100, 100)"}} >Products</Button>
+                    <Button  style={{color: "rgb(100, 100, 100)"}}  onClick={()=> navigate("/")}>Home</Button>  &gt;  <Button  style={{color: "rgb(100, 100, 100)"}} onClick={()=> navigate("/products")} >Products</Button>  &gt;  <Button  style={{color: "rgb(100, 100, 100)"}} >{shoe.name}</Button>
                 </p>
             <div style={{fontFamily: "Arial", margin: "5%"}}>
 
